@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+body {
+  background: #181d1f;
+  color: #e6e94f;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e6e94f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d73f;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 233, 79, 0.3);
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply bg-[#e6e94f] text-[#181d1f] px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-[#e6e94f] transition-all duration-300 transform hover:scale-105 shadow-lg;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply hover:transform hover:scale-105 transition-all duration-300;
+}
+
+/* Text selection */
+::selection {
+  background: #e6e94f;
+  color: #181d1f;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Form validation styles */
+.form-error {
+  @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+}
+
+.form-success {
+  @apply border-green-500 focus:border-green-500 focus:ring-green-500;
+}
+
+/* Image hover effects */
+.image-hover {
+  @apply transition-transform duration-300 hover:scale-110;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #e6e94f 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
