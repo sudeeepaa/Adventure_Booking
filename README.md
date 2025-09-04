@@ -1,32 +1,36 @@
-# Adventure Tours - Next.js Website
+# Adventure Tours — Next.js (TypeScript + Tailwind)
 
-A modern, responsive adventure tourism website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive adventure tourism website built with Next.js, TypeScript, and Tailwind CSS — focused on clean UI, accessibility, and an easy booking flow with email confirmations.
 
-## 🚀 Features
+---
 
-- **Responsive Design**: Mobile-first approach with beautiful animations
-- **Multiple Pages**: Home, About, Blogs, and Booking pages
-- **Email Integration**: Automated booking confirmations using Nodemailer
-- **Modern UI**: Consistent styling with hover effects and smooth transitions
-- **Image Optimization**: Consistent image sizes and responsive layouts
-- **Form Handling**: Interactive booking form with validation
+## 🚀 Highlights
 
-## 🛠️ Tech Stack
+* Mobile-first, responsive layout with smooth micro-interactions
+* Interactive booking form with client-side validation and automated email confirmations
+* Consistent, optimized images and a reusable `UnsplashImage` component
+* Simple, maintainable code structure using the App Router (Next.js) and TypeScript
 
-- **Frontend**: Next.js 15, React 19, TypeScript
-- **Styling**: Tailwind CSS 4
-- **Email**: Nodemailer
-- **Images**: Next.js Image optimization
-- **Development**: Turbopack for fast development
+---
 
-## 📁 Project Structure
+## 💻 Tech Stack
+
+* **Framework:** Next.js (App Router) + React + TypeScript
+* **Styling:** Tailwind CSS
+* **Email:** Nodemailer (development) — use a transactional email provider for production
+* **Image handling:** Next.js `<Image />` optimization and a reusable image component
+* **Dev tooling:** npm (or yarn). Turbopack is supported for faster dev builds if available in your environment.
+
+---
+
+## 📁 Project Structure (excerpt)
 
 ```
 2547252_labex10/
 ├── src/
 │   ├── app/
 │   │   ├── api/
-│   │   │   └── send-email/          # Email API endpoint
+│   │   │   └── send-email/          # Email API endpoint (serverless function)
 │   │   ├── components/
 │   │   │   ├── navbar.tsx           # Navigation component
 │   │   │   └── UnsplashImage.tsx    # Image component with consistent sizing
@@ -34,170 +38,169 @@ A modern, responsive adventure tourism website built with Next.js, TypeScript, a
 │   │   ├── blogs/                   # Blog listing page
 │   │   ├── book/                    # Booking page with form
 │   │   ├── styles/
-│   │   │   └── globals.css          # Global styles and custom CSS
+│   │   │   └── globals.css          # Global styles and Tailwind imports
 │   │   ├── layout.tsx               # Root layout
 │   │   └── page.tsx                 # Home page
-│   └── ...
 ├── public/                          # Static assets and images
 ├── package.json                     # Dependencies and scripts
 └── README.md                        # This file
 ```
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+## 🔧 Prerequisites
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd 2547252_labex10
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   # Create .env.local file
-   cp .env.local.example .env.local
-   # Edit .env.local with your email credentials
-   ```
-
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 📧 Email Setup
-
-The website includes automated email functionality for booking confirmations. See [EMAIL_SETUP.md](./EMAIL_SETUP.md) for detailed setup instructions.
-
-### Quick Setup:
-1. Install nodemailer: `npm install nodemailer @types/nodemailer`
-2. Create `.env.local` with your Gmail credentials
-3. Get Gmail app password from Google Account settings
-4. Test the booking form
-
-## 🎨 Design Features
-
-- **Color Scheme**: Dark theme with #181d1f background and #e6e94f accents
-- **Typography**: Modern, readable fonts with proper hierarchy
-- **Animations**: Smooth hover effects, transitions, and micro-interactions
-- **Images**: Consistent 300px height for all adventure images
-- **Responsive**: Mobile-first design that works on all devices
-
-## 📱 Pages Overview
-
-### Home Page (`/`)
-- Hero section with call-to-action
-- Adventure showcases with consistent image sizing
-- Company benefits and features
-- Vacation inspiration section
-
-### About Page (`/about`)
-- Company mission and values
-- Team information
-- Company statistics
-- Call-to-action section
-
-### Blogs Page (`/blogs`)
-- Featured blog post
-- Blog categories and filtering
-- Latest blog posts grid
-- Newsletter signup
-
-### Book Page (`/book`)
-- Adventure type selection
-- Interactive booking form
-- Email confirmation system
-- Form validation and feedback
-
-## 🔧 Development
-
-### Available Scripts
-
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-
-### Key Components
-
-- **Navbar**: Responsive navigation with smooth transitions
-- **UnsplashImage**: Consistent image component with hover effects
-- **Booking Form**: Interactive form with email integration
-- **Adventure Cards**: Selectable adventure types for booking
-
-## 🌟 Key Features
-
-1. **Consistent Image Sizing**: All images maintain 300px height for uniformity
-2. **Email Integration**: Automated booking confirmations
-3. **Responsive Design**: Works perfectly on all device sizes
-4. **Modern Animations**: Smooth transitions and hover effects
-5. **Form Validation**: Client-side validation with user feedback
-6. **Accessibility**: Proper labels, focus states, and semantic HTML
-
-## 🚀 Deployment
-
-The project is ready for deployment on platforms like:
-- Vercel (recommended for Next.js)
-- Netlify
-- Railway
-- Any Node.js hosting platform
-
-### Production Build
-```bash
-npm run build
-npm run start
-```
-
-## 📝 Customization
-
-### Colors
-Update the color scheme in `tailwind.config.js` and component files:
-- Primary: `#e6e94f` (Yellow)
-- Background: `#181d1f` (Dark)
-- Text: `#e6e94f` and `#ffffff`
-
-### Images
-Replace images in the `public/` folder:
-- Maintain aspect ratios
-- Use consistent dimensions
-- Optimize for web
-
-### Content
-Update text content in component files:
-- Company information
-- Adventure descriptions
-- Contact details
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🆘 Support
-
-For support or questions:
-- Check the [EMAIL_SETUP.md](./EMAIL_SETUP.md) for email configuration
-- Review the component structure in the `src/app/components/` folder
-- Check the console for any error messages
+* Node.js 18 or newer
+* npm (or yarn)
+* (Optional) A transactional email provider account for production (SendGrid, Mailgun, etc.)
 
 ---
 
-**Built with ❤️ using Next.js, TypeScript, and Tailwind CSS**
+## 🛠️ Local Development — Quickstart
+
+1. **Clone the repository**
+
+```bash
+git clone <your-repo-url>
+cd 2547252_labex10
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+# yarn
+```
+
+3. **Create environment file**
+
+```bash
+cp .env.local.example .env.local
+# Edit .env.local with your values (see example below)
+```
+
+**Example `.env.local`**
+
+```env
+# Example environment variables (do NOT commit secrets)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-email-app-password
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+4. **Run the dev server**
+
+```bash
+npm run dev
+# or
+# yarn dev
+```
+
+5. Open your browser at `http://localhost:3000`.
+
+---
+
+## 📧 Email / Booking Confirmation
+
+The repository includes a simple server-side API that sends booking confirmation emails using Nodemailer. This is convenient for development but **not recommended** for high-volume production use.
+
+**Quick setup:**
+
+1. Install nodemailer if not already installed:
+
+```bash
+npm install nodemailer @types/nodemailer
+```
+
+2. Add the SMTP credentials to `.env.local` (see example above). For Gmail, enable 2‑factor auth and create an App Password — *do not use your main account password*.
+
+3. Open `src/app/api/send-email/` to review and adapt the email template and logic.
+
+**Production recommendation:**
+Use a transactional email provider (SendGrid, Mailgun, Postmark, etc.) or a dedicated SMTP relay. These services handle deliverability, throttling, and reputation.
+
+---
+
+## 🎨 Design & UX Notes
+
+* **Color palette:** Dark background with bright accent (example: dark `#181d1f` with yellow accents)
+* **Typography:** Clear hierarchy and readable font sizes
+* **Images:** All adventure cards use a consistent visual height for a tidy grid — adjust the `UnsplashImage` component as needed
+* **Accessibility:** Use semantic HTML, focus states on interactive elements, and proper form labels
+
+---
+
+## 📄 Pages Overview
+
+* **Home** `/` — Hero, featured adventures, benefits, and CTAs
+* **About** `/about` — Mission, team, and company stats
+* **Blogs** `/blogs` — Blog listing, categories, and featured posts
+* **Book** `/book` — Adventure selection, interactive booking form, and confirmation flow
+
+---
+
+## ⚙️ Scripts
+
+* `npm run dev` — Start dev server
+* `npm run build` — Build for production
+* `npm run start` — Start production server (after `build`)
+
+---
+
+## 🚀 Deployment
+
+Recommended platforms:
+
+* **Vercel** (first-class support for Next.js)
+* Netlify, Railway, or any Node.js host
+
+**Deployment notes:**
+
+* Add the same environment variables to your hosting provider's settings (do not push `.env.local` to git).
+* For production email, prefer an API-based transactional provider or a production-grade SMTP relay.
+
+---
+
+## 🔧 Customization
+
+* **Colors & fonts:** Update `tailwind.config.js` and global CSS
+* **Images:** Replace the `public/` assets; keep aspect ratios consistent
+* **Content:** Update page components in `src/app/*`
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/your-change`)
+3. Commit your changes and push
+4. Open a Pull Request and describe the changes
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License. See `LICENSE` for details.
+
+---
+
+## 🆘 Support
+
+If you run into issues:
+
+* Check the browser console and terminal for errors
+* Verify environment variables are set correctly
+* Inspect the API endpoint in `src/app/api/send-email/`
+
+If you'd like, I can also:
+
+* Shorten this README to a one‑page quickstart
+* Add badges (build, license, npm) and a screenshot section
+* Add sample Vercel/GitHub Actions deployment config
+
+---
+
+*Built with care — happy hacking!*
