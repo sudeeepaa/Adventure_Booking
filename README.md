@@ -61,7 +61,7 @@ A modern, responsive adventure tourism website built with Next.js, TypeScript, a
 1. **Clone the repository**
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/sudeeepaa/Adventure_Booking.git
 cd 2547252_labex10
 ```
 
